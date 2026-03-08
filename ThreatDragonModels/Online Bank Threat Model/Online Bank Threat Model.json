@@ -987,7 +987,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Transaction D"
+                "text": "Transactio"
               },
               "topLine": {
                 "strokeWidth": 1.5,
@@ -1839,7 +1839,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
+              "name": "web server boundary\n",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -1847,7 +1847,7 @@
               "containedElements": []
             },
             "labels": [
-              "Trust Boundary"
+              "web server boundary\n"
             ],
             "id": "c7652429-ce7e-4754-ac80-0f32d65f332a",
             "source": {
@@ -1860,14 +1860,139 @@
             },
             "vertices": [
               {
-                "x": 430,
-                "y": 110
+                "x": 400,
+                "y": 10
+              },
+              {
+                "x": 420,
+                "y": 160
               },
               {
                 "x": 430,
                 "y": 350
               }
             ]
+          },
+          {
+            "position": {
+              "x": 1218,
+              "y": 193
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "cc7e3647-ada2-4f6a-8192-e740660af091"
+                },
+                {
+                  "group": "right",
+                  "id": "7b6bad1d-8ac7-44dd-a129-1c65b7086f2d"
+                },
+                {
+                  "group": "bottom",
+                  "id": "364f526e-ecdc-47a9-96f4-b37121197ade"
+                },
+                {
+                  "group": "left",
+                  "id": "589f95ff-f309-471b-a66f-65312eaa7763"
+                }
+              ]
+            },
+            "id": "2be7f20b-2b50-4598-8034-0d8944c98df0",
+            "data": {
+              "type": "tm.Store",
+              "name": "Store",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            },
+            "zIndex": 11
           }
         ],
         "description": "e-bank STRIDEj"
