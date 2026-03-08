@@ -1256,54 +1256,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Payment Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Payment Request"
-            ],
-            "id": "bb5e9c3f-bf4c-40c7-a27e-6ab5374d5b2d",
-            "source": {
-              "cell": "43d39320-5b8f-480d-8af2-efd8db757a69",
-              "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
-            },
-            "target": {
-              "cell": "4685a983-d22a-42a9-aa0e-6ee8cd209404",
-              "port": "f2d24992-f787-445d-8559-8bf344886a97"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1324,13 +1278,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "348e98ca-9a6d-42a7-ba2e-51ab95874d9c",
+                  "title": "Man in the Middle Attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Kredensial pengguna diketahui oleh pihak ketiga yang melakukan packet sniffing",
+                  "mitigation": "- Gunakan protokol terenkripsi (seperti https)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Payment Response"
@@ -1492,7 +1465,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1513,13 +1487,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "8b361de9-5b3c-448f-be51-424685860a1c",
+                  "title": "Http Response Manipulation",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "",
+                  "mitigation": "- Terapkan validasi input dan encoding output\n- Gunakan Web Application Firewall (WAF).  \n- Ikuti praktik pengkodean yang aman.  ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Payment Response"
@@ -1623,17 +1616,7 @@
                 "x": -400,
                 "y": 70
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "shape": "flow",
@@ -1686,7 +1669,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Denial of service",
-                  "description": "",
+                  "description": "Pengguna melakukan spam request",
                   "mitigation": "- terapkan rate-limiting\n- gunakan reverse proxy / anti-ddos service seperti cloudflare",
                   "modelType": "STRIDE",
                   "new": false,
@@ -1697,8 +1680,8 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 1,
-                "denialOfService": 2
+                "informationDisclosure": 2,
+                "denialOfService": 3
               }
             },
             "labels": [
@@ -1712,6 +1695,73 @@
             "target": {
               "cell": "43d39320-5b8f-480d-8af2-efd8db757a69",
               "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "0c5c7ea4-f062-49c4-93c0-983561a7e1c4",
+                  "title": "Man in the Middle Attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Kredensial pengguna diketahui oleh pihak ketiga yang melakukan packet sniffing",
+                  "mitigation": "  - Gunakan protokol terenkripsi (seperti https)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 4,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Payment Request"
+            ],
+            "id": "bb5e9c3f-bf4c-40c7-a27e-6ab5374d5b2d",
+            "source": {
+              "cell": "43d39320-5b8f-480d-8af2-efd8db757a69",
+              "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
+            },
+            "target": {
+              "cell": "4685a983-d22a-42a9-aa0e-6ee8cd209404",
+              "port": "f2d24992-f787-445d-8559-8bf344886a97"
             },
             "vertices": []
           },
@@ -1912,6 +1962,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Cybersecurity Architect",
-    "threatTop": 5
+    "threatTop": 8
   }
 }
