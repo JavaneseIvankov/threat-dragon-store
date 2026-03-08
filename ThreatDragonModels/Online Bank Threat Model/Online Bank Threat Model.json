@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "5243b817-3670-47bb-9634-3058089cfc39",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Webiste Dev",
@@ -173,6 +173,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -256,7 +257,6 @@
               ]
             },
             "id": "b60258b5-534a-44f9-af09-99570022d434",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Visitor",
@@ -290,6 +290,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -383,8 +384,7 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "zIndex": 3
+            }
           },
           {
             "position": {
@@ -407,6 +407,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -490,7 +491,6 @@
               ]
             },
             "id": "033d1fcf-f7c0-4ef6-aef1-24098a39a751",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "Public Website",
@@ -527,6 +527,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -610,7 +611,6 @@
               ]
             },
             "id": "112ec2d8-80bb-4585-bdaa-02fea7d62f5f",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Authentication",
@@ -647,6 +647,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -730,7 +731,6 @@
               ]
             },
             "id": "0901d087-1dad-419a-b295-23b4fde59571",
-            "zIndex": 6,
             "data": {
               "type": "tm.Process",
               "name": "Transaction",
@@ -770,6 +770,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -853,7 +854,6 @@
               ]
             },
             "id": "b16a2ed6-8ff2-48cb-9abc-e2928aab89bd",
-            "zIndex": 7,
             "data": {
               "type": "tm.Store",
               "name": "Public Webpages",
@@ -896,6 +896,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -1000,7 +1001,7 @@
                   "severity": "High",
                   "type": "Tampering",
                   "description": "Attackers modify or manipulate stored data.  ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "- Gunakan enkripsi untuk data yang tersimpan.  \n- Terapkan pemeriksaan integritas.  \n- Batasi akses hanya untuk personel yang berwenang.  ",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 5,
@@ -1008,13 +1009,21 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
             },
-            "zIndex": 8
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
@@ -1040,6 +1049,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 9,
             "ports": {
               "groups": {
                 "top": {
@@ -1137,8 +1147,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 9
+            }
           },
           {
             "shape": "flow",
@@ -1857,6 +1866,7 @@
             "shape": "trust-boundary-curve",
             "width": 200,
             "height": 100,
+            "zIndex": 11,
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
@@ -1892,8 +1902,7 @@
                 "x": 1082,
                 "y": 382
               }
-            ],
-            "zIndex": 11
+            ]
           },
           {
             "shape": "flow",
@@ -1934,7 +1943,7 @@
                   "severity": "High",
                   "type": "Information disclosure",
                   "description": "Sensitive  data is intercepted or exposed during  transmission.  ",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "- Gunakan enkripsi untuk data dalam transit.  \n- Hindari mengirim data sensitif dalam parameter URL.  \n- Batasi akses hanya untuk personel yang berwenang. ",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 4,
@@ -1944,7 +1953,7 @@
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -1961,6 +1970,10 @@
               "port": "7957b879-df4f-4ba2-80ac-9103ff505bb5"
             },
             "vertices": [
+              {
+                "x": 610,
+                "y": 490
+              },
               {
                 "x": 530,
                 "y": 500
@@ -2012,12 +2025,6 @@
               "cell": "0901d087-1dad-419a-b295-23b4fde59571",
               "port": "a2c176ac-2be3-4511-81ca-aceb30c197a7"
             },
-            "vertices": [
-              {
-                "x": 520,
-                "y": 410
-              }
-            ],
             "tools": {
               "items": [
                 "boundary",
@@ -2107,7 +2114,13 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
+            },
+            "vertices": [
+              {
+                "x": 520,
+                "y": 410
+              }
+            ]
           }
         ],
         "description": "e-bank STRIDEj"
