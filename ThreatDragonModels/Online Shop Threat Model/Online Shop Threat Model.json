@@ -1640,6 +1640,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1723,7 +1724,6 @@
               ]
             },
             "id": "d96861e5-af29-41ac-8f11-8b79ccfbb9bc",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "System",
@@ -1781,7 +1781,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
+              "name": "Web Server boundary",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -1789,7 +1789,7 @@
               "containedElements": []
             },
             "labels": [
-              "Trust Boundary"
+              "Web Server boundary"
             ],
             "id": "451e5e32-dcdf-40c9-997f-003a8c6c8ee6",
             "source": {
