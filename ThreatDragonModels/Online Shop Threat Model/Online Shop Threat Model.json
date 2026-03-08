@@ -860,59 +860,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Get Product Detail",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Get Product Detail"
-            ],
-            "id": "61562cde-e7cc-42f0-a9cb-b369f4848cbf",
-            "source": {
-              "cell": "cde56b69-0275-41cc-9b5f-6e2ef8e6cdae",
-              "port": "f2d24992-f787-445d-8559-8bf344886a97"
-            },
-            "target": {
-              "cell": "59fb9cbc-91f9-4127-be3a-9f4381d3bbda",
-              "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
-            },
-            "vertices": [
-              {
-                "x": -400,
-                "y": 70
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -933,13 +882,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "60aa1a5f-264c-465f-b219-f959333c2204",
+                  "title": "Http Response Manipulation",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Pengguna melakukan manipulasi response",
+                  "mitigation": "- Terapkan validasi input dan encoding output\n- Gunakan Web Application Firewall (WAF).  \n- Ikuti praktik pengkodean yang aman.  ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Product Detail Result"
@@ -1065,105 +1033,6 @@
               {
                 "x": -170,
                 "y": 170
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Payment Request",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Payment Request"
-            ],
-            "id": "d4d50361-ed14-4923-ae93-b457fb4c80d5",
-            "source": {
-              "cell": "cde56b69-0275-41cc-9b5f-6e2ef8e6cdae",
-              "port": "f2d24992-f787-445d-8559-8bf344886a97"
-            },
-            "target": {
-              "cell": "43d39320-5b8f-480d-8af2-efd8db757a69",
-              "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Payment Response",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Payment Response"
-            ],
-            "id": "e223375b-e5ab-47d9-b8ab-e4d4db0d3e60",
-            "source": {
-              "cell": "43d39320-5b8f-480d-8af2-efd8db757a69",
-              "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
-            },
-            "target": {
-              "cell": "cde56b69-0275-41cc-9b5f-6e2ef8e6cdae",
-              "port": "056d1582-bbb9-404e-8b1c-afc5afadc5f7"
-            },
-            "vertices": [
-              {
-                "x": -470,
-                "y": 270
               }
             ]
           },
@@ -1620,6 +1489,233 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment Response",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Payment Response"
+            ],
+            "id": "e223375b-e5ab-47d9-b8ab-e4d4db0d3e60",
+            "source": {
+              "cell": "43d39320-5b8f-480d-8af2-efd8db757a69",
+              "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
+            },
+            "target": {
+              "cell": "cde56b69-0275-41cc-9b5f-6e2ef8e6cdae",
+              "port": "056d1582-bbb9-404e-8b1c-afc5afadc5f7"
+            },
+            "vertices": [
+              {
+                "x": -470,
+                "y": 270
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Get Product Detail",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "549b1936-005a-44c7-9167-3c3bb30e1402",
+                  "title": "Http Request Payload Manpulation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Pengguna memanipulasi payload http",
+                  "mitigation": "- Terapkan validasi input dan encoding output\n- Gunakan Web Application Firewall (WAF).  \n- Ikuti praktik pengkodean yang aman.  ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "9ef6b3f3-3035-4419-930b-3bb092919ec4",
+                  "title": "Http Request Spamming",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Pengguna melakukan spam request",
+                  "mitigation": "- terapkan rate-limiting\n- gunakan reverse proxy / anti-ddos service seperti cloudflare",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 4
+              }
+            },
+            "labels": [
+              "Get Product Detail"
+            ],
+            "id": "61562cde-e7cc-42f0-a9cb-b369f4848cbf",
+            "source": {
+              "cell": "cde56b69-0275-41cc-9b5f-6e2ef8e6cdae",
+              "port": "f2d24992-f787-445d-8559-8bf344886a97"
+            },
+            "target": {
+              "cell": "59fb9cbc-91f9-4127-be3a-9f4381d3bbda",
+              "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
+            },
+            "vertices": [
+              {
+                "x": -400,
+                "y": 70
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Payment Request",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "a666ab44-b5f3-49c0-aa2b-ccf85148b166",
+                  "title": "Man in the middle attack",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Kredensial pengguna diketahui oleh pihak ketiga yang melakukan packet sniffing",
+                  "mitigation": "- Gunakan protokol terenkripsi (seperti https)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "d214c2bf-38aa-4ce8-b5c6-692612f62a94",
+                  "title": "Http Request Spamming",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "",
+                  "mitigation": "- terapkan rate-limiting\n- gunakan reverse proxy / anti-ddos service seperti cloudflare",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 2
+              }
+            },
+            "labels": [
+              "Payment Request"
+            ],
+            "id": "d4d50361-ed14-4923-ae93-b457fb4c80d5",
+            "source": {
+              "cell": "cde56b69-0275-41cc-9b5f-6e2ef8e6cdae",
+              "port": "f2d24992-f787-445d-8559-8bf344886a97"
+            },
+            "target": {
+              "cell": "43d39320-5b8f-480d-8af2-efd8db757a69",
+              "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
+            },
+            "vertices": []
+          },
+          {
             "position": {
               "x": -601.25,
               "y": 476
@@ -1816,6 +1912,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Cybersecurity Architect",
-    "threatTop": 0
+    "threatTop": 5
   }
 }
