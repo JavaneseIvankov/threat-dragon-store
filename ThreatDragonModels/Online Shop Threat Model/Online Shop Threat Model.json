@@ -370,11 +370,11 @@
           },
           {
             "position": {
-              "x": -320,
-              "y": 75
+              "x": -310,
+              "y": 74.99999999999997
             },
             "size": {
-              "width": 100,
+              "width": 90,
               "height": 90
             },
             "attrs": {
@@ -854,6 +854,149 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Get Product Detail",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Get Product Detail"
+            ],
+            "id": "61562cde-e7cc-42f0-a9cb-b369f4848cbf",
+            "source": {
+              "cell": "cde56b69-0275-41cc-9b5f-6e2ef8e6cdae",
+              "port": "f2d24992-f787-445d-8559-8bf344886a97"
+            },
+            "target": {
+              "cell": "59fb9cbc-91f9-4127-be3a-9f4381d3bbda",
+              "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
+            },
+            "vertices": [
+              {
+                "x": -400,
+                "y": 70
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "a5e9bca0-beaf-4bc2-b63b-0e4f92ca8305",
+            "source": {
+              "cell": "59fb9cbc-91f9-4127-be3a-9f4381d3bbda",
+              "port": "b5cc7899-e729-4211-a491-3e26a5a88128"
+            },
+            "target": {
+              "cell": "cde56b69-0275-41cc-9b5f-6e2ef8e6cdae",
+              "port": "f2d24992-f787-445d-8559-8bf344886a97"
+            },
+            "vertices": [
+              {
+                "x": -400,
+                "y": 160
+              },
+              {
+                "x": -477,
+                "y": 120
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             }
           }
         ]
