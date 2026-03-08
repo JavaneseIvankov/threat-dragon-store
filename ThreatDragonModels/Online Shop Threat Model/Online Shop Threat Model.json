@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "cde56b69-0275-41cc-9b5f-6e2ef8e6cdae",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Pengguna",
@@ -136,11 +136,11 @@
           },
           {
             "position": {
-              "x": -590,
+              "x": -608.75,
               "y": 242
             },
             "size": {
-              "width": 112.5,
+              "width": 150,
               "height": 60
             },
             "attrs": {
@@ -155,6 +155,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -248,8 +249,7 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "zIndex": 3
+            }
           },
           {
             "position": {
@@ -261,6 +261,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Bank"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -269,6 +272,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -354,7 +358,7 @@
             "id": "7c0663f4-84d0-453c-8227-bce7aff2861c",
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Bank",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -362,8 +366,7 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "zIndex": 4
+            }
           },
           {
             "position": {
@@ -386,6 +389,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -469,7 +473,6 @@
               ]
             },
             "id": "59fb9cbc-91f9-4127-be3a-9f4381d3bbda",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "E-commerce\nWebsite",
@@ -491,12 +494,12 @@
               "y": 262
             },
             "size": {
-              "width": 90,
-              "height": 90
+              "width": 120,
+              "height": 120
             },
             "attrs": {
               "text": {
-                "text": "Pembayaran"
+                "text": "Payment Gateway"
               },
               "body": {
                 "stroke": "#333333",
@@ -506,6 +509,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -591,7 +595,7 @@
             "id": "43d39320-5b8f-480d-8af2-efd8db757a69",
             "data": {
               "type": "tm.Process",
-              "name": "Pembayaran",
+              "name": "Payment Gateway",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -602,8 +606,7 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
-            },
-            "zIndex": 6
+            }
           },
           {
             "position": {
@@ -629,6 +632,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -712,7 +716,6 @@
               ]
             },
             "id": "71a7cb8b-91af-4a2f-be63-e53f669b1ccd",
-            "zIndex": 7,
             "data": {
               "type": "tm.Store",
               "name": "Inventory Database",
@@ -753,6 +756,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -850,8 +854,7 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "zIndex": 8
+            }
           }
         ]
       }
